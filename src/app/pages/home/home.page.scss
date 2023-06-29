@@ -1,0 +1,115 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+ion-searchbar {
+  --background: #171c26;
+  --color: #ffff;
+  --placeholder-color: #ffff;
+  --icon-color: #ffff;
+  --clear-button-color: #ffff;
+  --border-radius: 10px;
+  --cancel-button-color: #ffffff;
+}
+.home-title p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.collection {
+  margin-bottom: 16px;
+
+  .scroll-horizontal {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .scroll-horizontal > * {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  .collection-title {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 8px 16px 16px;
+  }
+  .scroll-item {
+    &.size-sm {
+      width: 120px;
+    }
+
+    &.size-md {
+      width: 200px;
+    }
+
+    &.size-xl {
+      width: 310px;
+    }
+  }
+  .item-title {
+    padding: 8px 0;
+    font-size: 13px;
+    white-space: break-spaces;
+  }
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-thumbnail {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.card-thumbnail-radius {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.card-thumbnail img,
+.card-thumbnail-radius img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container {
+  position: relative;
+  img {
+    height: 150px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 300px;
+  height: 50px;
+  border-bottom-right-radius: 20px; /* Radius sudut bawah kanan */
+  border-bottom-left-radius: 20px; /* Radius sudut bawah kiri */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.text-overlay h3 {
+  padding-left: 20px;
+  font-size: 16px; /* Ubah ukuran teks sesuai kebutuhan Anda */
+  font-weight: 500; /* Ubah gaya teks sesuai kebutuhan Anda */
+}

@@ -1,0 +1,76 @@
+<ion-content>
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-img
+            src="\assets\img\logo-soundbox.png"
+            alt="Soundbox Logo"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <h3 class="subtitle">Hi Dear!</h3>
+      </ion-row>
+      <ion-row>
+        <h3 class="tagline">Your Music Journey Begins Here!</h3>
+      </ion-row>
+    </ion-grid>
+    <ion-item>
+      <ion-icon color="dark" name="person"></ion-icon>
+      <ion-input
+        class="custom"
+        type="text"
+        [(ngModel)]="form.name"
+        required
+        label="    "
+        placeholder="Enter your  Name"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="dark" name="mail"></ion-icon>
+      <ion-input
+        class="custom"
+        type="email"
+        [(ngModel)]="form.email"
+        required
+        label="    "
+        placeholder="Enter your Email"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="dark" name="lock-closed"></ion-icon>
+      <ion-input
+        class="custom"
+        type="password"
+        [(ngModel)]="form.password"
+        required
+        label="    "
+        placeholder="Enter your Password"
+      ></ion-input>
+    </ion-item>
+    <p
+      class="password-reminder"
+      *ngIf="form.password.length > 0 && form.password.length < 8"
+    >
+      Password harus minimal 8 karakter
+    </p>
+    <ion-item>
+      <ion-icon color="dark" name="lock-closed"></ion-icon>
+      <ion-input
+        class="custom"
+        type="password"
+        [(ngModel)]="form.confirmation_password"
+        required
+        label="    "
+        placeholder="Enter Confirmation Password"
+      ></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="doSubmitWithValidateFormInput()"
+      >Register</ion-button
+    >
+    <ion-button fill="outline" expand="block" routerLink="/login-page"
+      >Already have an account? Login</ion-button
+    >
+  </div>
+</ion-content>

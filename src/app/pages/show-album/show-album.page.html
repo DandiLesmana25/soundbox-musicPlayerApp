@@ -1,0 +1,45 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="medium" defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="container" *ngIf="album && songs">
+
+    <ion-card>
+      <img alt="Album Cover" [src]="album?.albums_cover" />
+      <ion-card-header>
+        <ion-card-title>{{ album?.albums_title }}</ion-card-title>
+        <ion-card-subtitle>{{ album?.albums_release_date }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Author: {{ author?.users_name }}
+      </ion-card-content>
+    </ion-card>
+
+    <div class="song-list">
+      <ion-list>
+        <ion-item lines="none" *ngFor="let song of songs; let i = index">
+          <ion-thumbnail slot="start">
+            <img [src]="song?.songs_cover" alt="Song Cover" />
+          </ion-thumbnail>
+          <ion-label>
+            <h3>{{ song?.songs_title }}</h3>
+            <p>{{ song?.songs_artist }}</p>
+          </ion-label>
+          <ion-button size="medium" (click)="playIndexAudio(song?.songs_song, i)">
+            <ion-icon slot="start" *ngIf="currentIndex !== i || !isPlaying" name="play-circle-outline"></ion-icon>
+            <ion-icon slot="start" *ngIf="currentIndex === i && isPlaying" name="pause-circle-outline"></ion-icon>
+            {{ isPlaying && currentIndex === i ? 'Pause' : 'Play' }}
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </div>
+
+</ion-content>

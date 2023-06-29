@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root,
+:root[mode="md"],
+:root[mode="ios"] {
+  --ion-font-family: "Poppins", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", "Roboto", sans-serif !important;
+  font-family: var(--ion-font-family) !important;
+}
+.md ion-content {
+  background: var(--ion-background-color);
+}

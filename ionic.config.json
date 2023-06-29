@@ -1,0 +1,7 @@
+{
+  "name": "soundbox-ui",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

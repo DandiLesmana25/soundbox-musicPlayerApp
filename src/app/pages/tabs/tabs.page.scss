@@ -1,0 +1,25 @@
+ion-tab-button {
+  --color-selected: var(--ion-color-dark);
+}
+
+.playing-bar {
+  background-color: var(--ion-background-color-custom-dark);
+  color: var(--ion-color-light-contrast);
+  border-bottom: 0.55px solid var(--ion-color-light-shade);
+  color: white;
+  border-radius: 10px;
+
+  .playing-info {
+    padding: 4px 12px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+.thumbnail {
+  max-width: 30px;
+  max-height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+  --border-radius: 5px;
+}

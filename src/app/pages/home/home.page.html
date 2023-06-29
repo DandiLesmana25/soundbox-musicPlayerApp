@@ -1,0 +1,112 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="home-title">
+      <h2><b>Hii {{user.name}}</b></h2>
+      <p>What you want to hear today?</p>
+    </div>
+    <!-- <ion-searchbar show-cancel-button="focus" placeholder="Search your mood"></ion-searchbar> -->
+
+
+    <div class="subtitle">
+      <p>Recently Playing</p>
+    </div>
+    <div class="collection">
+      <div class="scroll-horizontal">
+        <div class="scroll-item size-xl" *ngFor="let song of lastPlayedSongs">
+          <div class="image-container" [routerLink]="['/show-album']" [queryParams]="{ id: song.albums_id }">
+            <img src="{{ song.songs_cover }}" />
+            <div class="text-overlay">
+              <h3>{{ song.songs_title }}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="subtitle">
+      <p>Weekly Chart-Toppers</p>
+    </div>
+
+    <div class="collection">
+      <div class="scroll-horizontal">
+        <div class="scroll-item size-sm" *ngFor="let song of weeklyTopSong">
+          <div class="card-thumbnail" [routerLink]="['/show-album']" [queryParams]="{ id: song.albums_id }">
+            <img src="{{song.songs_cover}}" />
+          </div>
+
+          <div class="item-title">
+            <ion-icon name="shuffle-outline"></ion-icon>
+            {{ song.songs_title }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="subtitle">
+      <p>Album</p>
+    </div>
+
+    <div class="collection">
+      <div class="scroll-horizontal">
+        <div class="scroll-item size-sm" *ngFor="let album of listAlbums">
+          <div class="card-thumbnail-radius" [routerLink]="['/show-album']" [queryParams]="{ id: album.id }">
+            <img src="{{album.albums_cover}}" />
+          </div>
+
+          <div class="item-title">
+            <ion-icon name="shuffle-outline"></ion-icon>
+            {{ album.albums_title }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="subtitle">
+      <p>Mood Booster</p>
+    </div>
+
+
+
+    <div class="collection">
+      <div class="scroll-horizontal">
+
+        <div class="scroll-item size-sm" routerLink="/show-playlist" *ngFor="let i of [0]">
+          <div class="card-thumbnail">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          </div>
+
+          <div class="item-title">
+            <ion-icon name="shuffle-outline"></ion-icon>
+            Sad
+          </div>
+        </div>
+
+
+
+
+        <div class="scroll-item size-sm" routerLink="/show-playlist" *ngFor="let i of [0]">
+          <div class="card-thumbnail">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          </div>
+
+          <div class="item-title">
+            <ion-icon name="shuffle-outline"></ion-icon>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>

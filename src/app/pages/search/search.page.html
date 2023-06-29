@@ -1,0 +1,60 @@
+<ion-toolbar>
+  <ion-title>
+    <h2><b>Search</b></h2>
+  </ion-title>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="title-all"></div>
+    <ion-searchbar
+     [(ngModel)]="keyword"
+     (ionChange)="search()"
+    (keyup.enter)="search()"
+      show-cancel-button="focus"
+      placeholder="Search your mood"
+    ></ion-searchbar>
+    <ion-segment color="dark" value="search">
+      <ion-segment-button value="Playlist">
+        <ion-label>Playlist</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Album">
+        <ion-label>Album</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <!-- <div class="search-results" *ngIf="searchResults && searchResults.length > 0"> -->
+      <!-- Tampilkan hasil pencarian di sini -->
+      <!-- <ion-list>
+        <ion-item *ngFor="let result of searchResults">
+          {{ result.songs_title}}
+        </ion-item>
+      </ion-list> -->
+    <!-- </div> -->
+    <div class="search-results">
+      <ion-list>
+        <ion-item lines="none" *ngFor="let song of searchResults ">
+          <ion-thumbnail slot="start">
+            <img
+              src="{{song.songs_cover}}"
+              alt="Song Cover"
+            />
+          </ion-thumbnail>
+          <ion-label>
+            <h3>{{ song.songs_title }}</h3>
+            <p>{{ song.songs_artist }}</p>
+          </ion-label>
+          <ion-button size="medium" (click)="playAudio(song?.songs_song)"> 
+            <ion-icon slot="start" name="play-circle-outline"></ion-icon>
+            Play
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </div>
+
+
+    <div class="no-results" *ngIf="searchResults?.length === 0">
+      No results found.
+    </div>
+    
+  </div>
+</ion-content>

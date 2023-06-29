@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="toolbar-title">
+      <ion-title> <b>Now Playing</b> </ion-title>
+    </div>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="closeModal()">
+        <ion-icon slot="icon-only" name="chevron-down"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="album-cover">
+    <ion-thumbnail>
+      <img src="{{songs[currentSongIndex]?.songs_cover }}" />
+      <!-- <img src="https://ionicframework.com/docs/img/demos/card-media.png" /> -->
+    </ion-thumbnail>
+  </div>
+
+  <div class="song-info ion-padding">
+    <div class="song-title">{{ songs[currentSongIndex]?.songs_title }}</div>
+    <!-- <div class="song-title">Viva La Vida</div> -->
+    <div class="artist-name">
+      <ion-text color="medium">{{ songs[currentSongIndex]?.artist_name }}</ion-text>
+      <!-- <ion-text color="medium">Coldplay</ion-text> -->
+    </div>
+  </div>
+
+  <div class="song-timeline ion-padding">
+    <ion-progress-bar color="dark" value="0.25"></ion-progress-bar>
+    <ion-row class="grid-no-padding ion-justify-content-between">
+      <ion-col size="auto"> 0:00 </ion-col>
+      <ion-col size="auto"> -4:18 </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="buttons ion-padding">
+    <ion-button color="dark" fill="clear" size="medium" (click)="playPreviousSong()">
+      <ion-icon slot="icon-only" name="play-skip-back"></ion-icon>
+    </ion-button>
+    <ion-fab-button color="dark" (click)="playAudio(songs[currentSongIndex]?.songs_song)">
+      <ion-icon [name]="isPlaying ? 'pause-sharp' : 'play-sharp'"></ion-icon>
+    </ion-fab-button>
+    <ion-button color="dark" fill="clear" size="medium"  (click)="nextPlaySong()">
+      <ion-icon slot="icon-only" name="play-skip-forward"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

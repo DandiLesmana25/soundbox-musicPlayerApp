@@ -1,0 +1,134 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.round-image {
+  display: flex;
+  justify-content: center;
+}
+
+.round-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: auto;
+  justify-content: center;
+}
+ion-thumbnail img {
+  border-radius: 10px;
+}
+
+ion-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-top {
+  margin-top: 50px;
+}
+.icon-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection {
+  margin-bottom: 16px;
+
+  .scroll-horizontal {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .scroll-horizontal > * {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  .collection-title {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 8px 16px 16px;
+  }
+
+  .media-card {
+    background-color: var(--ion-color-light);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 13px;
+    width: 180px;
+    height: 48px;
+  }
+
+  .scroll-item {
+    &.size-sm {
+      width: 120px;
+    }
+
+    &.size-md {
+      width: 200px;
+    }
+  }
+
+  .item-title {
+    padding: 8px 0;
+    font-size: 13px;
+    white-space: break-spaces;
+  }
+}
+
+ion-toolbar ion-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    text-transform: none;
+    font-weight: 700;
+  }
+}
+ion-modal {
+  --height: 300px;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+ion-modal::part(backdrop) {
+  background: rgba(209, 213, 219);
+  opacity: 1;
+}
+ion-modal ion-toolbar {
+  margin-top: 30px;
+  text-align: center;
+}
+ion-modal ion-item {
+  text-align: center;
+}
+ion-select {
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 40%;
+}
+
+.center-button {
+  position: absolute;
+  margin-top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: none;
+  --background: #171c26;
+  --border-radius: 10px;
+}

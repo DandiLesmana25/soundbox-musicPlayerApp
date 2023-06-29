@@ -1,0 +1,67 @@
+<ion-tabs>
+  <div class="playing-bar" (click)="openNowPlaying()">
+    <ion-progress-bar color="light" value="0.25"></ion-progress-bar>
+
+    <ion-row class="grid-no-padding ion-align-items-center">
+      <ion-col size="auto">
+        <ion-thumbnail class="thumbnail">
+          <img src="{{songs[currentSongIndex]?.songs_cover }}" alt="Song Cover" />
+        </ion-thumbnail>
+      </ion-col>
+
+      <ion-col>
+        <div class="playing-info">
+          <div class="song-info">
+            <span
+              ><ion-text><b>{{ songs[currentSongIndex]?.songs_title || '' }}</b></ion-text></span
+            >
+          </div>
+          <div class="song-info">
+            <span><ion-text color="medium">{{ songs[currentSongIndex]?.artist_name || '' }}</ion-text></span>
+          </div>
+        </div>
+      </ion-col>
+
+      <ion-col size="auto">
+        <ion-button fill="clear" color="medium" size="small"(click)="playPreviousSong(); stopPropagation($event)">
+          <ion-icon slot="icon-only" name="play-skip-back-sharp"></ion-icon>
+        </ion-button>
+        <ion-button
+          fill="clear"
+          color="medium"
+          size="large"
+          (click)="playAudio(songs[currentSongIndex]?.songs_song);stopPropagation($event)"
+        >
+          <ion-icon
+            [name]="isPlaying ? 'pause-sharp' : 'play-sharp'"
+          ></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" color="medium" size="small" (click)="nextPlaySong(); stopPropagation($event)" >
+          <ion-icon slot="icon-only" name="play-skip-forward-sharp"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="tabs-bar">
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home-sharp"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="search">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-label>Search</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="library">
+        <ion-icon name="reorder-three-outline"></ion-icon>
+        <ion-label>Library</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="profile">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </div>
+</ion-tabs>

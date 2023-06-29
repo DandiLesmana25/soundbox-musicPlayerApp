@@ -1,0 +1,116 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+}
+ion-thumbnail img {
+  border-radius: 10px;
+}
+// modal css start
+ion-modal {
+  --height: 300px;
+  --border-radius: 16px;
+  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+ion-modal::part(backdrop) {
+  background: rgba(209, 213, 219);
+  opacity: 1;
+}
+ion-modal ion-toolbar {
+  margin-top: 30px;
+  text-align: center;
+}
+ion-modal ion-item {
+  text-align: center;
+}
+
+ion-select {
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 40%;
+}
+.center-button {
+  position: absolute;
+  margin-top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: none;
+  --background: #171c26;
+  --border-radius: 10px;
+}
+
+// modal css start end
+
+.add-playlist {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.playlist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.center-button {
+  position: absolute;
+  margin-top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: none;
+  --background: #171c26;
+  --border-radius: 10px;
+}
+ion-row {
+  height: 45px;
+}
+
+.recomended {
+  margin-top: 30px;
+}
+.content-container {
+  height: 100%;
+  margin-top: -5px;
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail-container {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.thumbnail-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-container {
+  flex-grow: 1;
+  h2 {
+    font-size: 16px;
+    margin-bottom: -10px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+.title-recomended {
+  margin-left: 10px;
+}
+ion-icon {
+  margin-left: 5px;
+}

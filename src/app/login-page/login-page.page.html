@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-img
+            src="\assets\img\logo-soundbox.png"
+            alt="Soundbox Logo"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <h3 class="subtitle">Hi There!</h3>
+      </ion-row>
+      <ion-row>
+        <h3 class="subtitle">Welcome Back.</h3>
+      </ion-row>
+    </ion-grid>
+
+    <ion-item>
+      <ion-icon color="dark" name="person"></ion-icon>
+      <ion-input
+        class="custom"
+        type="email"
+        [(ngModel)]="formLogin.email"
+        required
+        label="    "
+        placeholder="Enter your  Email"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="dark" name="lock-closed"></ion-icon>
+      <ion-input
+        class="custom"
+        type="password"
+        [(ngModel)]="formLogin.password"
+        required
+        label="    "
+        placeholder="Enter your Password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="doSubmitWiFormInputLogin()"
+      >Login</ion-button
+    >
+    <ion-button fill="outline" expand="block" routerLink="/register-page"
+      >Create a new account</ion-button
+    >
+  </div>
+</ion-content>

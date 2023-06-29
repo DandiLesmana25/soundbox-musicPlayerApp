@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.welcome-logo {
+  font-size: 20px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.welcome-title {
+  font-size: 30px;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ion-img {
+  width: 70px;
+  margin-left: 20px;
+}
+
+.button-center {
+  ion-button {
+    --ion-color-primary: #171c26;
+    --ion-color-primary-contrast: white;
+    --border-radius: 10px;
+    width: 170px;
+    text-transform: none;
+  }
+}
+
+ion-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+ion-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+}
+
+ion-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  margin: 0px;
+}

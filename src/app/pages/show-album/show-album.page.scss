@@ -1,0 +1,42 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.album-cover {
+    ion-thumbnail {
+        width: 120px;
+        height: 120px;
+        --border-radius: 20px;
+    }
+
+    ion-col {
+        p {
+            text-align: start;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: #6c7689;
+        }
+
+        h2 {
+            text-align: start;
+            margin-top: 30px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+ion-button {
+    --background: #171c26;
+    --border-radius: 10px;
+    text-transform: none;
+    width: 160px;
+    height: 45px;
+}
+
+ion-thumbnail {
+    --border-radius: 10px;
+}

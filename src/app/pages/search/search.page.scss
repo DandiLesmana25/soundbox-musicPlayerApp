@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+ion-searchbar {
+  --background: #171c26;
+  --color: #ffff;
+  --placeholder-color: #ffff;
+  --icon-color: #ffff;
+  --clear-button-color: #ffff;
+  --border-radius: 10px;
+  --cancel-button-color: #ffffff;
+}
+
+ion-thumbnail img {
+  border-radius: 10px;
+}
+
+ion-label {
+  font-weight: 500;
+}

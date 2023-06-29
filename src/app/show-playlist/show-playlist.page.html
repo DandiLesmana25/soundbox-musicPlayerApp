@@ -1,0 +1,56 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="playAudio(songs[0]?.songs_song)">
+      <ion-back-button color="medium" defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container" *ngIf="album && songs">
+    <div class="album-cover">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5">
+            <ion-thumbnail>
+              <img src="{{ album.albums_cover }}" alt="" />
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col>
+            <h2><b>{{ album.albums_title }}</b></h2>
+            <p>{{ album.albums_release_date }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="buttons">
+      <ion-row class="ion-align-items-center">
+        <ion-col size="6">
+          <ion-button size="medium" (click)="playAudio(songs[0].songs_song)">
+            <ion-icon slot="start" name="play-circle-outline"></ion-icon>
+            Play
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="song-list">
+      <ion-list>
+        <ion-item lines="none" *ngFor="let song of songs let i = index">
+          <ion-thumbnail slot="start">
+            <img src="{{ song.songs_cover }}" alt="Song Cover" />
+          </ion-thumbnail>
+          <ion-label>
+            <h3>{{ song.songs_title }}</h3>
+            <p>{{ song.songs_artist }}</p>
+          </ion-label>
+          <ion-button size="medium" (click)="playIndexAudio(song.songs_song, i)">
+            <ion-icon slot="start" name="play-circle-outline"></ion-icon>
+            Play
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
