@@ -1,4 +1,4 @@
-# soundbox-musicPlayerApp
+#Frontend soundbox-musicPlayerApp
 
 requirement: 
 - Node.js versi 16.x.x 
@@ -11,3 +11,8 @@ step install apps:
 -ionic serve
 
 Aplikasi akan dijalankan di server pengembangan lokal dan dapat diakses melalui browser di http://localhost:8100.
+
+
+
+untuk backendnya saya menggunakan framework laravel dan sourcodenya bisa anda akses di https://github.com/DandiLesmana25/api-music.git 
+atau yang sudah ada di server yaitu http://soundbox.my.id
